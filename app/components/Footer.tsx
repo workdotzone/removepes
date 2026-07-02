@@ -79,7 +79,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Locations */}
+          {/* Contact */}
           <div>
             <h4 className="text-white font-bold text-base mb-5 pb-2 border-b border-blue-800 uppercase tracking-wider">Contact Us</h4>
             <ul className="space-y-4 text-sm">
@@ -111,49 +111,62 @@ export default function Footer() {
                   <p className="text-gray-400">24/7 — All Days Available</p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-yellow-400 mt-0.5">🗺️</span>
-                <div>
-                  <p className="text-gray-300 font-medium">Google Business</p>
-                  <a
-                    href="https://www.google.com/search?kgmid=/g/11z92g4fpc&q=Remove+Pest+Control+Mumbai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-yellow-400 transition"
-                  >
-                    View on Google Maps ↗
-                  </a>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
 
-        {/* Google Maps Embed */}
-        <div className="mb-10 rounded-xl overflow-hidden border border-blue-800">
-          <div className="bg-blue-950/50 px-4 py-3 flex items-center justify-between">
-            <p className="text-white font-semibold text-sm flex items-center gap-2">
-              <span>📍</span> Find Us on Google Maps — Bandra West, Mumbai
-            </p>
-            <a
-              href="https://www.google.com/search?kgmid=/g/11z92g4fpc&q=Remove+Pest+Control+Mumbai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-400 hover:text-yellow-300 text-xs font-medium transition"
-            >
-              Open in Google Maps ↗
-            </a>
+        {/* Map + GMB Section */}
+        <div className="mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 bg-blue-950/40 rounded-2xl border border-blue-800">
+          {/* GMB Info */}
+          <div className="flex flex-col justify-between gap-5">
+            <div>
+              <h4 className="text-white font-bold text-base mb-3 flex items-center gap-2">
+                <span className="text-yellow-400">📍</span> Find Us on Google Maps
+              </h4>
+              <p className="text-gray-400 text-sm mb-1">Remove Pest Control Mumbai</p>
+              <p className="text-gray-400 text-sm mb-4">
+                Flat 09, Sarita CHS, Building 24,<br />
+                Reclamation, Bandra West,<br />
+                Mumbai, Maharashtra — 400050
+              </p>
+              <p className="text-gray-400 text-sm mb-1">
+                📞 <a href="tel:+919420300006" className="hover:text-yellow-400 transition">+91-94203 00006</a>
+              </p>
+              <p className="text-gray-400 text-sm">⏰ Open 24/7</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://www.google.com/search?kgmid=/g/11z92g4fpc&q=Remove+Pest+Control+Mumbai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-2 px-4 rounded-lg transition text-sm"
+              >
+                🗺️ View on Google
+              </a>
+              <a
+                href="https://wa.me/919420300006?text=Hello%2C%20I%20need%20pest%20control%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition text-sm"
+              >
+                💬 WhatsApp Us
+              </a>
+            </div>
           </div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4655.136205488381!2d72.83225259999999!3d19.052761099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9dc1e7c469f%3A0x474b841eeff38d99!2sRemove%20Pest%20Control%20Mumbai!5e1!3m2!1sen!2sin!4v1782973578313!5m2!1sen!2sin"
-            width="100%"
-            height="260"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            title="Remove Pest Control Mumbai - Google Maps"
-          />
+
+          {/* Map Embed */}
+          <div className="rounded-xl overflow-hidden h-56 lg:h-auto min-h-[220px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4655.136205488381!2d72.83225259999999!3d19.052761099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9dc1e7c469f%3A0x474b841eeff38d99!2sRemove%20Pest%20Control%20Mumbai!5e1!3m2!1sen!2sin!4v1782973578313!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Remove Pest Control Mumbai - Google Maps"
+            />
+          </div>
         </div>
 
         {/* Trust Badges */}
