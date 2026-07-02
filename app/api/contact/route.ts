@@ -5,12 +5,12 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, email, phone, service, area, message, source } = body;
 
-    if (\!name || \!phone) {
+    if (!name || !phone) {
       return NextResponse.json({ error: 'Name and phone are required' }, { status: 400 });
     }
 
     const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-    if (\!accessKey) {
+    if (!accessKey) {
       console.error('WEB3FORMS_ACCESS_KEY is not set');
       console.log('LEAD:', JSON.stringify({ name, email, phone, service, area, message, source }));
       return NextResponse.json({ error: 'Email service not configured' }, { status: 500 });
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
 
     const result = await res.json();
 
-    if (\!result.success) {
+    if (!result.success) {
       console.error('Web3Forms error:', result);
       return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
     }
