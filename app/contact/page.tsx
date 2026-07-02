@@ -13,16 +13,32 @@ export default function Contact() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', service: '', area: '', message: '' });
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, source: 'Contact Page' }),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', service: '', area: '', message: '' });
+    } catch {
+      setError('Something went wrong. Please call us directly at +91-94203 00006.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const serviceAreas = [
@@ -155,10 +171,13 @@ export default function Contact() {
                       placeholder="Describe your pest problem briefly..."></textarea>
                   </div>
 
-                  <button type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold py-3.5 px-6 rounded-xl transition text-base shadow-lg shadow-blue-200 dark:shadow-none">
-                    📩 Submit — Get Free Inspection
+                  <button type="submit" disabled={loading}
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 disabled:opacity-60 text-white font-bold py-3.5 px-6 rounded-xl transition text-base shadow-lg shadow-blue-200 dark:shadow-none flex items-center justify-center gap-2">
+                    {loading ? (
+                      <><svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg> Sending...</>
+                    ) : '📩 Submit — Get Free Inspection'}
                   </button>
+                  {error && <p className="text-red-500 text-sm text-center">{error}</p>}
                   <p className="text-center text-gray-500 dark:text-gray-400 text-xs">We respond within 30 minutes · No spam, ever.</p>
                 </form>
               )}

@@ -11,27 +11,32 @@ export default function HeroContactForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Hero Form Submitted:', formData);
-    alert(`Thank you ${formData.name}! We will contact you soon at ${formData.phone}`);
-    setSubmitted(true);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: 'Cockroach Control',
-    });
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, source: 'Hero Form' }),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', service: 'Cockroach Control' });
+    } catch {
+      setError('Something went wrong. Please call us directly at +91-94203 00006.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -111,10 +116,14 @@ export default function HeroContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-blue-950 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg transition"
+            disabled={loading}
+            className="w-full bg-blue-950 hover:bg-blue-900 disabled:opacity-60 text-white font-bold py-2 px-4 rounded-lg transition flex items-center justify-center gap-2"
           >
-            Get Free Quote
+            {loading ? (
+              <><svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg> Sending...</>
+            ) : 'Get Free Quote'}
           </button>
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
         </form>
       )}
     </div>
