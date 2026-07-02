@@ -137,14 +137,14 @@ export default function Home() {
     "name": "RemovePest",
     "description": "Professional pest control services in Mumbai",
     "url": "https://removepest.in",
-    "telephone": "+91-94533 94533",
+    "telephone": "+91-94203 00006",
     "email": "info@removepest.in",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "D.N. Dube Road, Ratan Nagar",
-      "addressLocality": "Dahisar (E)",
+      "streetAddress": "Flat 09, Sarita CHS, Building 24, Reclamation",
+      "addressLocality": "Bandra West",
       "addressRegion": "Mumbai",
-      "postalCode": "400068",
+      "postalCode": "400050",
       "addressCountry": "IN"
     },
     "areaServed": ["Mumbai", "Andheri", "Bandra", "Dadar", "Fort", "Powai", "Worli", "Malad", "Navi Mumbai", "Thane"],
@@ -314,9 +314,9 @@ export default function Home() {
             ))}
           </div>
           <div className="bg-white dark:bg-slate-700 p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-blue-950 dark:text-white mb-4">Our Location - D.N. Dube Road, Dahisar</h3>
-            <p className="text-gray-700 dark:text-gray-300 text-lg mb-3">📍 D.N. Dube Road, Ratan Nagar, Dahisar (E), Mumbai - 400068</p>
-            <p className="text-gray-700 dark:text-gray-300 text-lg mb-3">📞 <a href="tel:+919453394533" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">+91-94533 94533</a></p>
+            <h3 className="text-2xl font-bold text-blue-950 dark:text-white mb-4">Our Location - Bandra West, Mumbai</h3>
+            <p className="text-gray-700 dark:text-gray-300 text-lg mb-3">📍 Flat 09, Sarita CHS, Building 24, Reclamation, Bandra West, Mumbai - 400050</p>
+            <p className="text-gray-700 dark:text-gray-300 text-lg mb-3">📞 <a href="tel:+919420300006" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">+91-94203 00006</a></p>
             <p className="text-gray-700 dark:text-gray-300 text-lg">📧 <a href="mailto:info@removepest.in" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">info@removepest.in</a></p>
           </div>
         </div>
@@ -405,7 +405,7 @@ export default function Home() {
               </div>
               <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How do I book a pest control service in Mumbai?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call us at +91-94533 94533, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments across Mumbai with flexible scheduling to suit your convenience.</p>
+                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call us at +91-94203 00006, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments across Mumbai with flexible scheduling to suit your convenience.</p>
               </div>
             </div>
           </div>
@@ -417,7 +417,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-6">Get Professional Pest Control Services Today</h2>
           <p className="text-xl text-blue-100 mb-8">Contact RemovePest for a free inspection and quote. No obligation!</p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-            <a href="tel:+919453394533" className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition inline-block">Call Now: +91-94533 94533</a>
+            <a href="tel:+919420300006" className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition inline-block">Call Now: +91-94203 00006</a>
             <a href="/contact" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-950 font-bold py-3 px-8 rounded-lg transition inline-block">Book Inspection</a>
           </div>
         </div>

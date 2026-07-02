@@ -12,10 +12,10 @@ export default function Footer() {
             <p className="text-blue-900 text-sm">Free inspection available. Same-day service across Mumbai.</p>
           </div>
           <div className="flex gap-3">
-            <a href="tel:+919453394533" className="bg-blue-950 hover:bg-blue-900 text-white font-bold py-2 px-5 rounded-lg transition text-sm">
+            <a href="tel:+919420300006" className="bg-blue-950 hover:bg-blue-900 text-white font-bold py-2 px-5 rounded-lg transition text-sm">
               📞 Call Now
             </a>
-            <a href="https://wa.me/919453394533" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-lg transition text-sm">
+            <a href="https://wa.me/919420300006" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-lg transition text-sm">
               💬 WhatsApp
             </a>
           </div>
@@ -35,8 +35,8 @@ export default function Footer() {
               Mumbai&apos;s most trusted pest control company since 2008. Certified experts, eco-friendly methods, 99.8% success rate.
             </p>
             <div className="flex gap-3">
-              <a href="tel:+919453394533" className="flex items-center gap-2 bg-blue-800 hover:bg-blue-700 px-3 py-2 rounded-lg text-sm transition">
-                <span>📞</span> <span>+91-94533 94533</span>
+              <a href="tel:+919420300006" className="flex items-center gap-2 bg-blue-800 hover:bg-blue-700 px-3 py-2 rounded-lg text-sm transition">
+                <span>📞</span> <span>+91-94203 00006</span>
               </a>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Footer() {
                 <span className="text-yellow-400 mt-0.5">📞</span>
                 <div>
                   <p className="text-gray-300 font-medium">Phone / WhatsApp</p>
-                  <a href="tel:+919453394533" className="text-gray-400 hover:text-yellow-400 transition">+91-94533 94533</a>
+                  <a href="tel:+919420300006" className="text-gray-400 hover:text-yellow-400 transition">+91-94203 00006</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -101,7 +101,7 @@ export default function Footer() {
                 <span className="text-yellow-400 mt-0.5">📍</span>
                 <div>
                   <p className="text-gray-300 font-medium">Address</p>
-                  <p className="text-gray-400">D.N. Dube Road, Ratan Nagar,<br />Dahisar (E), Mumbai - 400068</p>
+                  <p className="text-gray-400">Flat 09, Sarita CHS, Building 24,<br />Reclamation, Bandra West,<br />Mumbai - 400050</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -111,8 +111,49 @@ export default function Footer() {
                   <p className="text-gray-400">24/7 — All Days Available</p>
                 </div>
               </li>
+              <li className="flex items-start gap-3">
+                <span className="text-yellow-400 mt-0.5">🗺️</span>
+                <div>
+                  <p className="text-gray-300 font-medium">Google Business</p>
+                  <a
+                    href="https://www.google.com/search?kgmid=/g/11z92g4fpc&q=Remove+Pest+Control+Mumbai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-yellow-400 transition"
+                  >
+                    View on Google Maps ↗
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
+        </div>
+
+        {/* Google Maps Embed */}
+        <div className="mb-10 rounded-xl overflow-hidden border border-blue-800">
+          <div className="bg-blue-950/50 px-4 py-3 flex items-center justify-between">
+            <p className="text-white font-semibold text-sm flex items-center gap-2">
+              <span>📍</span> Find Us on Google Maps — Bandra West, Mumbai
+            </p>
+            <a
+              href="https://www.google.com/search?kgmid=/g/11z92g4fpc&q=Remove+Pest+Control+Mumbai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-400 hover:text-yellow-300 text-xs font-medium transition"
+            >
+              Open in Google Maps ↗
+            </a>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4655.136205488381!2d72.83225259999999!3d19.052761099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9dc1e7c469f%3A0x474b841eeff38d99!2sRemove%20Pest%20Control%20Mumbai!5e1!3m2!1sen!2sin!4v1782973578313!5m2!1sen!2sin"
+            width="100%"
+            height="260"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="Remove Pest Control Mumbai - Google Maps"
+          />
         </div>
 
         {/* Trust Badges */}

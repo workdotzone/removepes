@@ -196,8 +196,8 @@ export default function Gallery() {
           <p className="text-xl text-blue-100 mb-8">
             Join thousands of satisfied customers. Schedule your free inspection today!
           </p>
-          <a href="tel:+919453394533" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition">
-            Call +91-94533 94533
+          <a href="tel:+919420300006" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition">
+            Call +91-94203 00006
           </a>
         </div>
       </section>

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pest Control Services in Mumbai | Cockroach, Termite, Rodent & More",
-  description: "Complete pest control services in Mumbai. Cockroach, termite, rodent, bedbug, mosquito control & more. Professional, safe, eco-friendly. Call +91-94533 94533.",
+  description: "Complete pest control services in Mumbai. Cockroach, termite, rodent, bedbug, mosquito control & more. Professional, safe, eco-friendly. Call +91-94203 00006.",
   keywords: "pest control services Mumbai, cockroach control, termite control, rodent control, bedbug treatment, mosquito control, professional pest management",
 };
 
@@ -190,8 +190,8 @@ export default function Services() {
           <p className="text-xl text-blue-100 mb-8">
             Contact us today for a free inspection!
           </p>
-          <a href="tel:+919453394533" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition">
-            Call +91-94533 94533
+          <a href="tel:+919420300006" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition">
+            Call +91-94203 00006
           </a>
         </div>
       </section>

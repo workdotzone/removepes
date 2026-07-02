@@ -42,8 +42,8 @@ export default function Contact() {
                 Phone
               </h3>
               <p className="text-gray-700 dark:text-gray-300 font-semibold">
-                <a href="tel:+919453394533" className="hover:text-blue-600 transition">
-                  +91-94533 94533
+                <a href="tel:+919420300006" className="hover:text-blue-600 transition">
+                  +91-94203 00006
                 </a>
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -72,8 +72,8 @@ export default function Contact() {
                 Location
               </h3>
               <p className="text-gray-700 dark:text-gray-300 font-semibold text-sm">
-                D.N. Dube Road, Ratan Nagar<br/>
-                Dahisar (E), Mumbai - 400068
+                Flat 09, Sarita CHS, Building 24, Reclamation<br/>
+                Bandra West, Mumbai - 400050
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Serving all areas
@@ -277,8 +277,8 @@ export default function Contact() {
             <p className="text-xl text-blue-100 mb-8">
               Call us now or fill the form above for immediate assistance!
             </p>
-            <a href="tel:+919453394533" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition text-lg">
-              📞 Call Now: +91-94533 94533
+            <a href="tel:+919420300006" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition text-lg">
+              📞 Call Now: +91-94203 00006
             </a>
           </div>
       </section>

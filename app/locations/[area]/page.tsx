@@ -100,7 +100,7 @@ export async function generateMetadata({
   if (!location) return {};
   return {
     title: `Pest Control Services in ${location.name} Mumbai | RemovePest`,
-    description: `Professional pest control services in ${location.name}, Mumbai. Cockroach, termite, rodent, bedbug & mosquito control. Certified experts, eco-friendly. Call +91-94533 94533.`,
+    description: `Professional pest control services in ${location.name}, Mumbai. Cockroach, termite, rodent, bedbug & mosquito control. Certified experts, eco-friendly. Call +91-94203 00006.`,
     keywords: `pest control ${location.name}, pest control in ${location.name} Mumbai, ${location.name} pest management, cockroach control ${location.name}, termite control ${location.name}`,
   };
 }
@@ -143,7 +143,7 @@ export default async function LocationPage({
     <>
       <HeroSection
         title={`Pest Control Services in ${location.name}, Mumbai`}
-        subtitle={`Professional pest management in ${location.name}. ${location.description} Same-day service available. Call +91-94533 94533 for a free inspection!`}
+        subtitle={`Professional pest management in ${location.name}. ${location.description} Same-day service available. Call +91-94203 00006 for a free inspection!`}
         showContactForm={true}
         heroImage="/images/hero/banner.png"
       />
@@ -289,7 +289,7 @@ export default async function LocationPage({
               </div>
               <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How do I book pest control in {location.name}?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call +91-94533 94533, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments in {location.name} with flexible scheduling.</p>
+                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call +91-94203 00006, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments in {location.name} with flexible scheduling.</p>
               </div>
             </div>
           </div>
@@ -302,8 +302,8 @@ export default async function LocationPage({
           <h2 className="text-4xl font-bold mb-6">Book Pest Control in {location.name} Today</h2>
           <p className="text-xl text-blue-100 mb-8">Free inspection available. Same-day service across {location.name}, Mumbai.</p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-            <a href="tel:+919453394533" className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition inline-block">
-              Call Now: +91-94533 94533
+            <a href="tel:+919420300006" className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition inline-block">
+              Call Now: +91-94203 00006
             </a>
             <a href="/contact" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-950 font-bold py-3 px-8 rounded-lg transition inline-block">
               Book Free Inspection

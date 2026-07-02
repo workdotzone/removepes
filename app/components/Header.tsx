@@ -42,8 +42,8 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <a href="tel:+919453394533" className="hidden sm:inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-2 px-4 rounded-lg transition">
-            +91-94533 94533
+          <a href="tel:+919420300006" className="hidden sm:inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-2 px-4 rounded-lg transition">
+            +91-94203 00006
           </a>
 
           {/* Mobile Menu Button */}

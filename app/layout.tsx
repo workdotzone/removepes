@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Best Pest Control Services in Mumbai | RemovePest - 24/7 Emergency",
-  description: "Professional pest control services in Mumbai with 15+ years experience. Cockroach, termite, rodent & bedbug control. Certified experts, eco-friendly methods, 99.8% success rate. Call +91-94533 94533 for free inspection.",
+  description: "Professional pest control services in Mumbai with 15+ years experience. Cockroach, termite, rodent & bedbug control. Certified experts, eco-friendly methods, 99.8% success rate. Call +91-94203 00006 for free inspection.",
   keywords: "pest control services in Mumbai, pest control Mumbai, cockroach control, termite control, rodent control, bedbug treatment, mosquito control, professional pest control, pest management Mumbai",
   openGraph: {
     title: "Best Pest Control Services in Mumbai | RemovePest",

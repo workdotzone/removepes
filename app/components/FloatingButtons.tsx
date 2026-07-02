@@ -3,7 +3,7 @@ export default function FloatingButtons() {
     <>
       {/* Floating Call Button - Left */}
       <a
-        href="tel:+919453394533"
+        href="tel:+919420300006"
         className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"
         aria-label="Call RemovePest"
       >
@@ -15,7 +15,7 @@ export default function FloatingButtons() {
 
       {/* Floating WhatsApp Button - Right */}
       <a
-        href="https://wa.me/919453394533?text=Hello%2C%20I%20need%20pest%20control%20services%20in%20Mumbai."
+        href="https://wa.me/919420300006?text=Hello%2C%20I%20need%20pest%20control%20services%20in%20Mumbai."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"

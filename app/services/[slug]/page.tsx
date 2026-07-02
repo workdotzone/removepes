@@ -282,7 +282,7 @@ const serviceData: Record<string, {
       { q: 'Is honey bee removal dangerous?', a: 'It can be dangerous without proper equipment and training. Our team uses full bee suits, smokers, and professional tools to safely remove bees without harm to you or them.' },
       { q: 'Will the bees return after removal?', a: 'We remove the entire hive including comb and seal the location. Without the hive structure and pheromones, bees are very unlikely to return to the same spot.' },
       { q: 'Can you remove a bee hive from inside a wall?', a: 'Yes. Wall bee hives require opening a section of the wall to access the hive. We work with you to minimize structural disruption and arrange for sealing after removal.' },
-      { q: 'How quickly can you respond to a bee emergency?', a: 'We offer same-day emergency bee removal across Mumbai. Call +91-94533 94533 for immediate assistance.' },
+      { q: 'How quickly can you respond to a bee emergency?', a: 'We offer same-day emergency bee removal across Mumbai. Call +91-94203 00006 for immediate assistance.' },
     ],
   },
   'bird-nesting-control': {
@@ -363,7 +363,7 @@ const serviceData: Record<string, {
       { q: 'How often should sanitization be done?', a: 'For high-traffic areas like offices, restaurants, and schools, monthly sanitization is recommended. For residences, quarterly or as needed (post-illness, post-renovation) is sufficient.' },
       { q: 'Is the sanitization fogging safe for children?', a: 'Yes, after the recommended 2–3 hour ventilation period. We use WHO-listed disinfectants that leave no harmful residue after the recommended airing time.' },
       { q: 'Do you provide sanitization certificates?', a: 'Yes. We provide a certificate of sanitization with details of chemicals used, dilution rates, coverage area, and date of treatment — required by many regulatory authorities.' },
-      { q: 'Can you do emergency sanitization same day?', a: 'Yes. We offer emergency sanitization services across Mumbai with same-day availability. Call +91-94533 94533 for immediate assistance.' },
+      { q: 'Can you do emergency sanitization same day?', a: 'Yes. We offer emergency sanitization services across Mumbai with same-day availability. Call +91-94203 00006 for immediate assistance.' },
     ],
   },
   'general-pest-control': {
@@ -580,8 +580,8 @@ export default async function ServicePage({
           <h2 className="text-3xl font-bold mb-4">Book {service.name} in Mumbai Today</h2>
           <p className="text-blue-100 text-lg mb-8">Free inspection · Same-day service · Guaranteed results</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="tel:+919453394533" className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition">
-              Call: +91-94533 94533
+            <a href="tel:+919420300006" className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition">
+              Call: +91-94203 00006
             </a>
             <a href="/contact" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-950 font-bold py-3 px-8 rounded-lg transition">
               Book Free Inspection
