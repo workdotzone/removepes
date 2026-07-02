@@ -21,17 +21,24 @@ export default function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/contact', {
+      const form = e.target as HTMLFormElement;
+      const data = new FormData(form);
+      data.append('access_key', 'ed52b2f5-6cd1-4aa2-96ed-f647fffc21ad');
+      data.append('subject', `New Lead: ${formData.service || 'Pest Control'} — ${formData.name} (${formData.phone})`);
+      data.append('from_name', 'RemovePest Website');
+      data.append('redirect', 'false');
+
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, source: 'Contact Page' }),
+        body: data,
       });
-      if (!res.ok) throw new Error('Failed');
+      const result = await res.json();
+      if (!result.success) throw new Error(result.message || 'Failed');
       setSubmitted(true);
       setFormData({ name: '', email: '', phone: '', service: '', area: '', message: '' });
     } catch {
