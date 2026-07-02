@@ -518,6 +518,8 @@ export default async function ServicePage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <HeroSection
+        title={`${service.name} in Mumbai`}
         subtitle={`${service.tagline} — ${service.description}`}
         showContactForm={true}
         heroImage="/images/hero/banner.png"
