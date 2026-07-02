@@ -1,0 +1,51 @@
+import Image from 'next/image';
+
+export default function ServiceCard({
+  icon,
+  title,
+  description,
+  features,
+  image,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  image?: string;
+}) {
+  return (
+    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden flex flex-col">
+      {/* Image */}
+      {image && (
+        <div className="relative w-full h-48 bg-gray-200 dark:bg-slate-700">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
+      )}
+      
+      {/* Content */}
+      <div className="p-6 flex flex-col flex-grow">
+        {!image && <div className="text-4xl mb-4">{icon}</div>}
+        <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-3">
+          {title}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+          {description}
+        </p>
+        <ul className="space-y-2">
+          {features.map((feature, idx) => (
+            <li key={idx} className="flex items-start">
+              <span className="text-blue-600 dark:text-blue-400 mr-2 font-bold">✓</span>
+              <span className="text-gray-700 dark:text-gray-200 text-sm">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
