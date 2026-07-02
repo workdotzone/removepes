@@ -2,6 +2,30 @@ import HeroSection from './components/HeroSection';
 import ServiceCard from './components/ServiceCard';
 import ReviewsSection from './components/ReviewsSection';
 import FaqSection from './components/FaqSection';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Pest Control Services in Mumbai | RemovePest \u2014 Cockroach, Termite, Rodent',
+  description: 'Best pest control services in Mumbai. Cockroach, termite, rodent, bedbug & mosquito control. 15+ years experience, certified experts, eco-friendly. Free inspection. Call +91-94203 00006.',
+  keywords: 'pest control services in Mumbai, cockroach control Mumbai, termite treatment Mumbai, rodent control Mumbai, bedbug treatment, mosquito control, professional pest control, pest management Mumbai, pest control near me',
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  openGraph: {
+    title: 'Best Pest Control Services in Mumbai | RemovePest',
+    description: 'Professional pest control in Mumbai. 15+ years experience. Cockroach, termite, rodent & bedbug control. Free inspection. Call +91-94203 00006.',
+    url: 'https://removepest.in',
+    siteName: 'RemovePest',
+    type: 'website',
+    locale: 'en_IN',
+    images: [{ url: 'https://removepest.in/images/hero/banner.png', width: 1200, height: 630, alt: 'Professional Pest Control Services in Mumbai \u2014 RemovePest' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Pest Control Services in Mumbai | RemovePest',
+    description: 'Professional pest control in Mumbai. Free inspection. Cockroach, termite, rodent & bedbug control. Call +91-94203 00006.',
+    images: ['https://removepest.in/images/hero/banner.png'],
+  },
+  alternates: { canonical: 'https://removepest.in' },
+};
 
 export default function Home() {
   const services = [
@@ -25,9 +49,11 @@ export default function Home() {
 
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "PestControlService"],
     "name": "RemovePest",
-    "description": "Professional pest control services in Mumbai",
+    "image": "https://removepest.in/images/hero/banner.png",
+    "logo": "https://removepest.in/images/logo.png",
+    "description": "Professional pest control services in Mumbai — cockroach, termite, rodent, bedbug, mosquito control. 15+ years experience, certified experts, eco-friendly methods.",
     "url": "https://removepest.in",
     "telephone": "+91-94203 00006",
     "email": "info@removepest.in",
@@ -39,24 +65,67 @@ export default function Home() {
       "postalCode": "400050",
       "addressCountry": "IN"
     },
-    "areaServed": ["Mumbai", "Andheri", "Bandra", "Dadar", "Fort", "Powai", "Worli", "Malad", "Navi Mumbai", "Thane"],
-    "priceRange": "₹",
+    "geo": { "@type": "GeoCoordinates", "latitude": 19.052761, "longitude": 72.832253 },
+    "areaServed": ["Mumbai", "Andheri", "Bandra", "Dadar", "Fort", "Powai", "Worli", "Malad", "Navi Mumbai", "Thane", "Borivali", "Kandivali", "Ghatkopar", "Mulund", "Thane"],
+    "priceRange": "₹500 - ₹5000",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, UPI, Bank Transfer",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "500"
+      "reviewCount": "500",
+      "bestRating": "5",
+      "worstRating": "1"
     },
+    "review": [
+      { "@type": "Review", "author": { "@type": "Person", "name": "Rajesh Kumar" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Professional service and very responsive. They solved our cockroach problem in just 2 visits." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Priya Sharma" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Best pest control in Mumbai! They are prompt, efficient, and use safe methods." }
+    ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       "opens": "00:00",
       "closes": "23:59"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pest Control Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cockroach Control", "url": "https://removepest.in/services/cockroach-control" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Termite Control", "url": "https://removepest.in/services/termite-control" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rodent Control", "url": "https://removepest.in/services/rodent-control" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bed Bugs Treatment", "url": "https://removepest.in/services/bed-bugs-control" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mosquito Control", "url": "https://removepest.in/services/mosquito-control" } }
+      ]
     }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How long does a pest control treatment take?", "acceptedAnswer": { "@type": "Answer", "text": "Most standard treatments take 1–3 hours depending on the size of your property and the type of pest. Termite treatments and AMC services may require additional visits." } },
+      { "@type": "Question", "name": "Are your pest control chemicals safe for children and pets?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We use only government-approved, WHO-certified chemicals safe for humans and pets after 2–4 hours drying time post-treatment." } },
+      { "@type": "Question", "name": "Do you offer a warranty on pest control services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide a service warranty from 3 months to 1 year. If pests return within the warranty period, we offer free re-treatment." } },
+      { "@type": "Question", "name": "How much does pest control cost in Mumbai?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing starts from ₹500 and varies based on property size, pest type, and treatment method. Contact us for a free inspection and quote." } },
+      { "@type": "Question", "name": "Which areas in Mumbai do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "We serve all areas of Mumbai including Andheri, Bandra, Dadar, Borivali, Dahisar, Malad, Kandivali, Powai, Thane, Navi Mumbai, Worli, Fort, and all Western and Central line localities." } },
+      { "@type": "Question", "name": "Is a free inspection available before treatment?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer a free pest inspection for all new customers. Our expert will assess the infestation, identify entry points, and recommend the most effective treatment plan." } }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://removepest.in" }
+    ]
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       
       <HeroSection 
         title="Professional Pest Control Services In Mumbai" 

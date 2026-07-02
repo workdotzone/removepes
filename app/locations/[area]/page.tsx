@@ -101,9 +101,26 @@ export async function generateMetadata({
   const location = mumbaiLocations[area];
   if (!location) return {};
   return {
-    title: `Pest Control Services in ${location.name} Mumbai | RemovePest`,
-    description: `Professional pest control services in ${location.name}, Mumbai. Cockroach, termite, rodent, bedbug & mosquito control. Certified experts, eco-friendly. Call +91-94203 00006.`,
-    keywords: `pest control ${location.name}, pest control in ${location.name} Mumbai, ${location.name} pest management, cockroach control ${location.name}, termite control ${location.name}`,
+    title: `Pest Control Services in ${location.name} Mumbai | RemovePest \u2014 Call Now`,
+    description: `Professional pest control in ${location.name}, Mumbai. Cockroach, termite, rodent, bedbug & mosquito control. Same-day service, 15+ years experience, certified experts. Free inspection. Call +91-94203 00006.`,
+    keywords: `pest control ${location.name}, pest control in ${location.name} Mumbai, ${location.name} pest management, cockroach control ${location.name}, termite control ${location.name}, rodent control ${location.name}, pest control services ${location.name}`,
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+    openGraph: {
+      title: `Pest Control in ${location.name}, Mumbai | RemovePest`,
+      description: `Professional pest control services in ${location.name}. ${location.description} Free inspection. Call +91-94203 00006.`,
+      url: `https://removepest.in/locations/${area}`,
+      siteName: 'RemovePest',
+      type: 'website',
+      locale: 'en_IN',
+      images: [{ url: 'https://removepest.in/images/hero/banner.png', width: 1200, height: 630, alt: `Pest Control Services in ${location.name}, Mumbai` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Pest Control in ${location.name}, Mumbai | RemovePest`,
+      description: `Professional pest control in ${location.name}. Free inspection available. Call +91-94203 00006.`,
+      images: ['https://removepest.in/images/hero/banner.png'],
+    },
+    alternates: { canonical: `https://removepest.in/locations/${area}` },
   };
 }
 
@@ -141,8 +158,33 @@ export default async function LocationPage({
     );
   }
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "PestControlService"],
+    "name": `RemovePest \u2014 Pest Control in ${location.name}`,
+    "image": "https://removepest.in/images/hero/banner.png",
+    "description": `Professional pest control services in ${location.name}, Mumbai. ${location.description}`,
+    "url": `https://removepest.in/locations/${area}`,
+    "telephone": "+91-94203 00006",
+    "areaServed": location.name,
+    "address": { "@type": "PostalAddress", "addressLocality": "Bandra West", "addressRegion": "Mumbai", "postalCode": "400050", "addressCountry": "IN" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500", "bestRating": "5" }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://removepest.in" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://removepest.in/#locations" },
+      { "@type": "ListItem", "position": 3, "name": `Pest Control in ${location.name}`, "item": `https://removepest.in/locations/${area}` }
+    ]
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <HeroSection
         title={`Pest Control Services in ${location.name}, Mumbai`}
         subtitle={`Professional pest management in ${location.name}. ${location.description} Same-day service available. Call +91-94203 00006 for a free inspection!`}

@@ -435,9 +435,26 @@ export async function generateMetadata({
   const service = serviceData[slug];
   if (!service) return {};
   return {
-    title: `${service.name} in Mumbai | RemovePest — Professional Pest Control`,
-    description: service.description,
-    keywords: `${service.name.toLowerCase()} Mumbai, ${service.name.toLowerCase()} service, professional ${service.name.toLowerCase()}, pest control Mumbai`,
+    title: `${service.name} in Mumbai | RemovePest — Professional & Guaranteed`,
+    description: `${service.description} 15+ years experience, certified experts, eco-friendly. Free inspection. Call +91-94203 00006.`,
+    keywords: `${service.name.toLowerCase()} Mumbai, ${service.name.toLowerCase()} service Mumbai, professional ${service.name.toLowerCase()}, best ${service.name.toLowerCase()} Mumbai, pest control Mumbai`,
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+    openGraph: {
+      title: `${service.name} in Mumbai | RemovePest`,
+      description: `${service.description} Free inspection. Same-day service. Call +91-94203 00006.`,
+      url: `https://removepest.in/services/${slug}`,
+      siteName: 'RemovePest',
+      type: 'website',
+      locale: 'en_IN',
+      images: [{ url: `https://removepest.in${service.image}`, width: 370, height: 255, alt: `${service.name} Service in Mumbai — RemovePest` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.name} in Mumbai | RemovePest`,
+      description: `${service.description} Call +91-94203 00006 for free inspection.`,
+      images: [`https://removepest.in${service.image}`],
+    },
+    alternates: { canonical: `https://removepest.in/services/${slug}` },
   };
 }
 
@@ -457,10 +474,50 @@ export default async function ServicePage({
     );
   }
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${service.name} in Mumbai`,
+    "description": service.longDescription,
+    "url": `https://removepest.in/services/${slug}`,
+    "image": `https://removepest.in${service.image}`,
+    "provider": {
+      "@type": ["LocalBusiness", "PestControlService"],
+      "name": "RemovePest",
+      "telephone": "+91-94203 00006",
+      "url": "https://removepest.in",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bandra West", "addressRegion": "Mumbai", "postalCode": "400050", "addressCountry": "IN" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500", "bestRating": "5" }
+    },
+    "areaServed": "Mumbai",
+    "serviceType": service.name
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faq.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a }
+    }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://removepest.in" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://removepest.in/services" },
+      { "@type": "ListItem", "position": 3, "name": service.name, "item": `https://removepest.in/services/${slug}` }
+    ]
+  };
+
   return (
     <>
-      <HeroSection
-        title={`${service.name} in Mumbai`}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         subtitle={`${service.tagline} — ${service.description}`}
         showContactForm={true}
         heroImage="/images/hero/banner.png"
