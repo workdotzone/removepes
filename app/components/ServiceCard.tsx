@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export default function ServiceCard({
-  icon,
+  icon = '',
   title,
   description,
   features,
