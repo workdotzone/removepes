@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
-/* Force dark: classes to only apply when .dark class is manually set — never auto-triggered by OS */
+/* Class-based dark mode — 'dark' class on <html> forces dark mode always */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f8f9fa;
-  --foreground: #0f1419;
-  --primary: #1e40af;
+  --background: #0f1419;
+  --foreground: #f1f5f9;
+  --primary: #3b82f6;
   --primary-dark: #1a237e;
-  --accent: #0369a1;
+  --accent: #0ea5e9;
 }
 
 @theme inline {
