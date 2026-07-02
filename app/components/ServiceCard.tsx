@@ -7,7 +7,7 @@ export default function ServiceCard({
   features,
   image,
 }: {
-  icon: string;
+  icon?: string;
   title: string;
   description: string;
   features: string[];
