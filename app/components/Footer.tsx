@@ -66,13 +66,18 @@ export default function Footer() {
             <h4 className="text-white font-bold text-base mb-5 pb-2 border-b border-blue-800 uppercase tracking-wider">Our Services</h4>
             <ul className="space-y-3">
               {[
-                'Cockroach Control', 'Termite Control', 'Rodent Control',
-                'Bed Bugs Treatment', 'Mosquito Control', 'Fly Control',
-                'Spider Control', 'Ants Control',
+                { label: 'Cockroach Control', slug: 'cockroach-control' },
+                { label: 'Termite Control', slug: 'termite-control' },
+                { label: 'Rodent Control', slug: 'rodent-control' },
+                { label: 'Bed Bugs Treatment', slug: 'bed-bugs-control' },
+                { label: 'Mosquito Control', slug: 'mosquito-control' },
+                { label: 'Fly Control', slug: 'fly-control' },
+                { label: 'Spider Control', slug: 'spider-control' },
+                { label: 'Ants Control', slug: 'ants-control' },
               ].map((s) => (
-                <li key={s}>
-                  <Link href="/services" className="text-gray-400 hover:text-yellow-400 transition text-sm flex items-center gap-2">
-                    <span className="text-yellow-500">›</span> {s}
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}`} className="text-gray-400 hover:text-yellow-400 transition text-sm flex items-center gap-2">
+                    <span className="text-yellow-500">›</span> {s.label}
                   </Link>
                 </li>
               ))}

@@ -10,96 +10,21 @@ export const metadata: Metadata = {
 
 export default function Services() {
   const allServices = [
-    {
-      title: 'Cockroach Control',
-      description: 'Eliminate cockroaches completely with our safe and effective treatment.',
-      features: ['German & American Cockroaches', '100% Safe for Family', 'Guaranteed Results', '24/7 Support'],
-      image: '/images/services/cockroach-control.png',
-    },
-    {
-      title: 'Bed Bugs Treatment',
-      description: 'Complete bedbug elimination for homes and commercial spaces.',
-      features: ['Heat Treatment', 'Chemical Treatment', 'Follow-up Visits', 'Prevention Tips'],
-      image: '/images/services/bed-bugs.png',
-    },
-    {
-      title: 'Fly Control',
-      description: 'Protect from disease-carrying flies with our specialized treatment.',
-      features: ['Larval Control', 'Adult Fly Treatment', 'Sanitation Guidance', 'Prevention Methods'],
-      image: '/images/services/fly-control.png',
-    },
-    {
-      title: 'Rodent Control',
-      description: 'Get rid of rats and mice permanently with eco-friendly methods.',
-      features: ['Trapping & Removal', 'Prevention Strategies', 'Waste Management', 'Sealing & Exclusion'],
-      image: '/images/services/rodent-control.png',
-    },
-    {
-      title: 'Mosquito Control',
-      description: 'Protect from dengue and malaria with our mosquito control program.',
-      features: ['Fogging Service', 'Larvae Control', 'Seasonal Spray', 'Disease Prevention'],
-      image: '/images/services/mosquito-control.png',
-    },
-    {
-      title: 'Rats Control',
-      description: 'Professional rat removal and exclusion services for complete protection.',
-      features: ['Rat Trapping', 'Exclusion Services', 'Monitoring Systems', 'Prevention Tips'],
-      image: '/images/services/rats-control.png',
-    },
-    {
-      title: 'Spider Control',
-      description: 'Safe removal of spiders and other crawling insects.',
-      features: ['Spider Web Removal', 'Preventive Spray', 'Safe Methods', 'Family-Friendly'],
-      image: '/images/services/spider-control.png',
-    },
-    {
-      title: 'Ants Control',
-      description: 'Eliminate ant colonies completely with targeted treatment.',
-      features: ['Colony Elimination', 'Nest Location', 'Prevention Barriers', 'Long-Lasting Results'],
-      image: '/images/services/ants-control.png',
-    },
-    {
-      title: 'Wood Borer Control',
-      description: 'Protect wooden structures from wood-boring insects.',
-      features: ['Pre-Treatment', 'Post-Treatment', 'Wood Inspection', 'Annual Checks'],
-      image: '/images/services/wood-borer-control.png',
-    },
-    {
-      title: 'Termite & Fly Treatment',
-      description: 'Combined solution for termite and fly infestations.',
-      features: ['Dual Treatment', 'Chemical & Baiting', 'Regular Monitoring', 'Warranty Included'],
-      image: '/images/services/fly-termite.png',
-    },
-    {
-      title: 'Honey Bee Control',
-      description: 'Safe relocation of honey bees and hive management.',
-      features: ['Bee Relocation', 'Hive Removal', 'Eco-Friendly', 'Professional Team'],
-      image: '/images/services/honey-bee-control.png',
-    },
-    {
-      title: 'Sanitization Services',
-      description: 'Complete sanitization and disinfection for homes and offices.',
-      features: ['Disinfection Spray', 'Surface Treatment', 'Health & Safety', 'Professional Grade'],
-      image: '/images/services/sanitaisation.png',
-    },
-    {
-      title: 'General Pest Control',
-      description: 'Comprehensive pest management for all types of pests.',
-      features: ['Multi-Pest Treatment', 'Customized Plans', 'Regular Maintenance', 'Expert Assessment'],
-      image: '/images/services/genral-pest-control.png',
-    },
-    {
-      title: 'Weed Control',
-      description: 'Remove weeds and unwanted vegetation safely.',
-      features: ['Herbicide Application', 'Manual Removal', 'Prevention Methods', 'Environmentally Safe'],
-      image: '/images/services/weed-control.png',
-    },
-    {
-      title: 'Bird Control',
-      description: 'Manage bird infestations on residential and commercial properties.',
-      features: ['Bird Netting', 'Spike Installation', 'Humane Methods', 'Preventive Measures'],
-      image: '/images/services/bird-control.png',
-    },
+    { title: 'Cockroach Control', href: '/services/cockroach-control', description: 'Eliminate cockroaches completely with our safe and effective treatment.', features: ['German & American Cockroaches', '100% Safe for Family', 'Guaranteed Results', '24/7 Support'], image: '/images/services/cockroach-control.png' },
+    { title: 'Bed Bugs Treatment', href: '/services/bed-bugs-control', description: 'Complete bedbug elimination for homes and commercial spaces.', features: ['Heat Treatment', 'Chemical Treatment', 'Follow-up Visits', 'Prevention Tips'], image: '/images/services/bed-bugs.png' },
+    { title: 'Fly Control', href: '/services/fly-control', description: 'Protect from disease-carrying flies with our specialized treatment.', features: ['Larval Control', 'Adult Fly Treatment', 'Sanitation Guidance', 'Prevention Methods'], image: '/images/services/fly-control.png' },
+    { title: 'Rodent Control', href: '/services/rodent-control', description: 'Get rid of rats and mice permanently with eco-friendly methods.', features: ['Trapping & Removal', 'Prevention Strategies', 'Waste Management', 'Sealing & Exclusion'], image: '/images/services/rodent-control.png' },
+    { title: 'Mosquito Control', href: '/services/mosquito-control', description: 'Protect from dengue and malaria with our mosquito control program.', features: ['Fogging Service', 'Larvae Control', 'Seasonal Spray', 'Disease Prevention'], image: '/images/services/mosquito-control.png' },
+    { title: 'Rats Control', href: '/services/rats-control', description: 'Professional rat removal and exclusion services for complete protection.', features: ['Rat Trapping', 'Exclusion Services', 'Monitoring Systems', 'Prevention Tips'], image: '/images/services/rats-control.png' },
+    { title: 'Spider Control', href: '/services/spider-control', description: 'Safe removal of spiders and other crawling insects.', features: ['Spider Web Removal', 'Preventive Spray', 'Safe Methods', 'Family-Friendly'], image: '/images/services/spider-control.png' },
+    { title: 'Ants Control', href: '/services/ants-control', description: 'Eliminate ant colonies completely with targeted treatment.', features: ['Colony Elimination', 'Nest Location', 'Prevention Barriers', 'Long-Lasting Results'], image: '/images/services/ants-control.png' },
+    { title: 'Wood Borer Control', href: '/services/wood-borer-control', description: 'Protect wooden structures from wood-boring insects.', features: ['Pre-Treatment', 'Post-Treatment', 'Wood Inspection', 'Annual Checks'], image: '/images/services/wood-borer-control.png' },
+    { title: 'Termite Control', href: '/services/termite-control', description: 'Complete termite elimination with baiting, soil, and wood treatment.', features: ['Soil Treatment', 'Wood Treatment', 'Baiting System', '1 Year Warranty'], image: '/images/services/fly-termite.png' },
+    { title: 'Honey Bee Control', href: '/services/honey-bee-control', description: 'Safe relocation of honey bees and hive management.', features: ['Bee Relocation', 'Hive Removal', 'Eco-Friendly', 'Professional Team'], image: '/images/services/honey-bee-control.png' },
+    { title: 'Sanitization Services', href: '/services/sanitization', description: 'Complete sanitization and disinfection for homes and offices.', features: ['Disinfection Spray', 'Surface Treatment', 'Health & Safety', 'Professional Grade'], image: '/images/services/sanitaisation.png' },
+    { title: 'General Pest Control', href: '/services/general-pest-control', description: 'Comprehensive pest management for all types of pests.', features: ['Multi-Pest Treatment', 'Customized Plans', 'Regular Maintenance', 'Expert Assessment'], image: '/images/services/genral-pest-control.png' },
+    { title: 'Weed Control', href: '/services/weed-control', description: 'Remove weeds and unwanted vegetation safely.', features: ['Herbicide Application', 'Manual Removal', 'Prevention Methods', 'Environmentally Safe'], image: '/images/services/weed-control.png' },
+    { title: 'Bird Nesting Control', href: '/services/bird-nesting-control', description: 'Manage bird infestations on residential and commercial properties.', features: ['Bird Netting', 'Spike Installation', 'Humane Methods', 'Preventive Measures'], image: '/images/services/bird-control.png' },
   ];
 
   return (
