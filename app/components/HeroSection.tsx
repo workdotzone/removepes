@@ -16,10 +16,10 @@ export default function HeroSection({
 }) {
   return (
     <div className="relative bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 text-white py-20 sm:py-32 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400 opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 opacity-10 rounded-full blur-3xl"></div>
+      {/* Background accent - no expensive blur */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400 opacity-10 rounded-full"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 opacity-10 rounded-full"></div>
       </div>
 
       {/* Content */}
@@ -38,15 +38,12 @@ export default function HeroSection({
                 <div className="relative w-full h-64 sm:h-80 rounded-lg overflow-hidden shadow-2xl">
                   <Image
                     src={heroImage}
-                    alt="Pest Control Service"
+                    alt="Professional pest control services in Mumbai — RemovePest"
                     fill
                     className="object-cover"
                     priority
+                    fetchPriority="high"
                   />
-                </div>
-              )}
-            </div>
-            <div className="sticky top-24">
               <HeroContactForm />
             </div>
           </div>
@@ -60,30 +57,28 @@ export default function HeroSection({
               <p className="text-xl text-blue-100 mb-8">
                 {subtitle}
               </p>
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
+              <a href="/contact" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
                 Get Free Inspection
-              </button>
+              </a>
               {heroImage && (
                 <div className="relative w-full h-64 sm:h-80 mt-8 rounded-lg overflow-hidden shadow-2xl">
                   <Image
                     src={heroImage}
-                    alt="Pest Control Service"
+                    alt="Professional pest control technician at work in Mumbai"
                     fill
                     className="object-cover"
                     priority
-                  />
-                </div>
-              )}
-            </div>
-            <div className="hidden md:flex items-center justify-center">
+                    fetchPriority="high"
+                  / aria-hidden="true">
               {heroImage ? (
                 <div className="relative w-80 h-80 rounded-lg overflow-hidden shadow-2xl">
                   <Image
                     src={heroImage}
-                    alt="Pest Control Service"
+                    alt=""
                     fill
                     className="object-cover"
                     priority
+                    aria-hidden
                   />
                 </div>
               ) : (
