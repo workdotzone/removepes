@@ -38,6 +38,8 @@ export default function FaqSection({
           onClick={() => setOpenIdx(isOpen ? null : idx)}
           className="w-full flex items-start gap-4 p-5 text-left"
           aria-expanded={isOpen}
+          aria-controls={`faq-answer-${idx}`}
+          aria-label={item.q}
         >
           {/* Number badge */}
           <span
@@ -66,6 +68,9 @@ export default function FaqSection({
 
         {/* Answer */}
         <div
+          id={`faq-answer-${idx}`}
+          role="region"
+          aria-label={item.q}
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
             isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}

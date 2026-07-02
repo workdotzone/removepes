@@ -119,30 +119,30 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-5 bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-sm">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Full Name *</label>
-                      <input type="text" name="name" value={formData.name} onChange={handleChange} required
+                      <label htmlFor="contact-name" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Full Name *</label>
+                      <input id="contact-name" type="text" name="name" value={formData.name} onChange={handleChange} required autoComplete="name"
                         className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:bg-slate-700 dark:text-white text-sm"
                         placeholder="Your full name" />
                     </div>
                     <div>
-                      <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Phone Number *</label>
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required
+                      <label htmlFor="contact-phone" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Phone Number *</label>
+                      <input id="contact-phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} required autoComplete="tel"
                         className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:bg-slate-700 dark:text-white text-sm"
                         placeholder="+91-98765 43210" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Email Address</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange}
+                    <label htmlFor="contact-email" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Email Address</label>
+                    <input id="contact-email" type="email" name="email" value={formData.email} onChange={handleChange} autoComplete="email"
                       className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:bg-slate-700 dark:text-white text-sm"
                       placeholder="your@email.com" />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Select Service *</label>
-                      <select name="service" value={formData.service} onChange={handleChange} required
+                      <label htmlFor="contact-service" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Select Service *</label>
+                      <select id="contact-service" name="service" value={formData.service} onChange={handleChange} required
                         className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 dark:bg-slate-700 dark:text-white text-sm">
                         <option value="">-- Choose Service --</option>
                         <option value="cockroach">Cockroach Control</option>
@@ -164,16 +164,16 @@ export default function Contact() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Your Area / Location</label>
-                      <input type="text" name="area" value={formData.area} onChange={handleChange}
+                      <label htmlFor="contact-area" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Your Area / Location</label>
+                      <input id="contact-area" type="text" name="area" value={formData.area} onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:bg-slate-700 dark:text-white text-sm"
                         placeholder="e.g. Andheri, Bandra..." />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Message / Problem Description</label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} rows={4}
+                    <label htmlFor="contact-message" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1.5 text-sm">Message / Problem Description</label>
+                    <textarea id="contact-message" name="message" value={formData.message} onChange={handleChange} rows={4}
                       className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:bg-slate-700 dark:text-white text-sm resize-none"
                       placeholder="Describe your pest problem briefly..."></textarea>
                   </div>
