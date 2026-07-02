@@ -15,6 +15,13 @@ const locationSlugs = [
   'colaba', 'fort', 'worli',
 ];
 
+const serviceSlugs = [
+  'cockroach-control', 'termite-control', 'rodent-control', 'bed-bugs-control',
+  'mosquito-control', 'fly-control', 'ants-control', 'spider-control',
+  'wood-borer-control', 'honey-bee-control', 'bird-nesting-control',
+  'weed-control', 'sanitization', 'general-pest-control', 'rats-control',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://removepest.in';
 
@@ -33,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...locationPages];
+  const servicePages: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...servicePages, ...locationPages];
 }
