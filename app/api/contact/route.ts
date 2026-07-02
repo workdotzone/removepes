@@ -9,11 +9,55 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Name and phone are required' }, { status: 400 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      console.error('RESEND_API_KEY is not set');
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      console.error('WEB3FORMS_ACCESS_KEY is not set');
+      // Still log the lead to server logs even if email can't be sent
+      console.log('LEAD:', JSON.stringify({ name, email, phone, service, area, message, source }));
       return NextResponse.json({ error: 'Email service not configured' }, { status: 500 });
     }
+
+    const emailBody = [
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      email ? `Email: ${email}` : '',
+      service ? `Service: ${service}` : '',
+      area ? `Area: ${area}` : '',
+      message ? `Message: ${message}` : '',
+      `Source: ${source || 'Website Form'}`,
+    ].filter(Boolean).join('\n');
+
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: accessKey,
+        subject: `🔔 New Lead: ${service || 'Pest Control'} — ${name} (${phone})`,
+        from_name: 'RemovePest Website',
+        name,
+        email: email || 'noreply@removepest.in',
+        phone,
+        service: service || '',
+        area: area || '',
+        message: emailBody,
+        redirect: false,
+      }),
+    });
+
+    const result = await res.json();
+
+    if (!result.success) {
+      console.error('Web3Forms error:', result);
+      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error('Contact API error:', err);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+  }
+}
+
 
     const htmlBody = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
