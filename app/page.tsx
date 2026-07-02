@@ -1,5 +1,6 @@
 import HeroSection from './components/HeroSection';
 import ServiceCard from './components/ServiceCard';
+import ReviewsSection from './components/ReviewsSection';
 
 export default function Home() {
   const services = [
@@ -19,26 +20,7 @@ export default function Home() {
     { icon: '🌾', title: 'Weed Control', href: '/services/weed-control', description: 'Remove weeds and unwanted vegetation safely.', features: ['Herbicide Application', 'Manual Removal', 'Prevention Methods', 'Environmentally Safe'], image: '/images/services/weed-control.png' },
     { icon: '🪶', title: 'Bird Nesting Control', href: '/services/bird-nesting-control', description: 'Manage bird infestations on residential and commercial properties.', features: ['Bird Netting', 'Spike Installation', 'Humane Methods', 'Preventive Measures'], image: '/images/services/bird-control.png' },
   ];
-  const testimonials = [
-    {
-      name: 'Rajesh Kumar',
-      company: 'Software Engineer',
-      message: 'Professional service and very responsive. They solved our cockroach problem in just 2 visits.',
-      rating: 5,
-    },
-    {
-      name: 'Priya Sharma',
-      company: 'Business Owner',
-      message: 'Best pest control in Mumbai! They are prompt, efficient, and use safe methods.',
-      rating: 5,
-    },
-    {
-      name: 'Amit Patel',
-      company: 'Restaurant Owner',
-      message: 'Regular service provider for our restaurant. No issues with pests since we started with them.',
-      rating: 5,
-    },
-  ];
+  const testimonials = null; // replaced by ReviewsSection component
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -120,24 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-blue-950 dark:text-white mb-4">What Our Mumbai Customers Say</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">Trusted by thousands of satisfied customers across Mumbai.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
-                <div className="mb-4">{[...Array(testimonial.rating)].map((_, i) => (<span key={i} className="text-yellow-400">⭐</span>))}</div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4 italic">&quot;{testimonial.message}&quot;</p>
-                <p className="font-bold text-blue-950 dark:text-white">{testimonial.name}</p>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">{testimonial.company}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ReviewsSection />
 
       <section className="py-16 bg-gray-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

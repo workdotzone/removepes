@@ -1,5 +1,6 @@
 import HeroSection from '../../components/HeroSection';
 import ServiceCard from '../../components/ServiceCard';
+import ReviewsSection from '../../components/ReviewsSection';
 import type { Metadata } from 'next';
 
 const mumbaiLocations: Record<string, { name: string; description: string }> = {
@@ -197,6 +198,8 @@ export default async function LocationPage({
           </div>
         </div>
       </section>
+
+      <ReviewsSection locationName={location.name} />
 
       {/* SEO Content */}
       <section className="py-16 bg-gray-50 dark:bg-slate-800">
