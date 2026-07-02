@@ -162,6 +162,76 @@ export default async function LocationPage({
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-white dark:bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-950 dark:text-white mb-4">
+              Frequently Asked Questions — Pest Control in {location.name}
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Common questions about our pest control services in {location.name}, Mumbai.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Left Column */}
+            <div className="space-y-4">
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you provide pest control in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes! We provide full pest control services across {location.name}, Mumbai. {location.description} Same-day and next-day appointments are available.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How long does a pest control treatment take?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Most standard treatments take 1–3 hours depending on property size and pest type. Termite and bedbug treatments may require additional follow-up visits for complete elimination.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Are your chemicals safe for children and pets in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes. We use only government-approved, WHO-certified chemicals that are safe for families and pets after the recommended drying time of 2–4 hours post-treatment.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you offer a warranty on treatments in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes, we provide a service warranty from 3 months to 1 year depending on treatment type. If pests return within the warranty period, we offer free re-treatment at no additional cost.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How much does pest control cost in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Pricing starts from ₹500 for basic treatments and varies by property size, pest type, and treatment method. Contact us for a free inspection and customized quote with no hidden charges.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do I need to vacate my home during treatment in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">For most treatments, we recommend staying out for 2–4 hours. For intensive treatments like termite or bed bug control, 4–8 hours may be required. Our team will provide full pre- and post-treatment instructions.</p>
+              </div>
+            </div>
+            {/* Right Column */}
+            <div className="space-y-4">
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How many treatments are needed to eliminate termites in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Termite control typically requires 2–3 sessions for complete elimination using soil treatment, baiting systems, and wood treatment. A long-term warranty is included.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Can pest control be done in a rented flat in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Absolutely. We regularly service rented flats and housing societies across {location.name}. We also work with building management offices for AMC and bulk bookings.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">What preparation is needed before pest control?</h3>
+                <p className="text-gray-600 dark:text-gray-300">We recommend clearing kitchen cabinets, removing food items from countertops, covering drinking water, and keeping children and pets away. Our technicians provide a full pre-treatment checklist at booking.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you provide pest control for restaurants and offices in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes. We specialize in commercial pest control for restaurants, hotels, hospitals, warehouses, and food processing units in {location.name}. FSSAI-compliant with audit documentation provided.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Is a free inspection available in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes, we offer a free pest inspection for all new customers in {location.name}. Our expert will assess the infestation level, identify entry points, and recommend the most effective and affordable treatment plan.</p>
+              </div>
+              <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How do I book pest control in {location.name}?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call +91-94533 94533, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments in {location.name} with flexible scheduling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-950 to-blue-900 dark:from-slate-900 dark:to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
