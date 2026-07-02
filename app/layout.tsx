@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://removepest.in",
   },
+  verification: {
+    google: "YTRGfuhoQONpT-huBkGhrjXjoVX38-WG0953Vj4IZpY",
+  },
 };
 
 export default function RootLayout({
