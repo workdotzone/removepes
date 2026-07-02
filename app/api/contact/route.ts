@@ -9,12 +9,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Name and phone are required' }, { status: 400 });
     }
 
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-    if (!accessKey) {
-      console.error('WEB3FORMS_ACCESS_KEY is not set');
-      console.log('LEAD:', JSON.stringify({ name, email, phone, service, area, message, source }));
-      return NextResponse.json({ error: 'Email service not configured' }, { status: 500 });
-    }
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY || 'ed52b2f5-6cd1-4aa2-96ed-f647fffc21ad';
 
     const emailBody = [
       `Name: ${name}`,
