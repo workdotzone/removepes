@@ -170,7 +170,7 @@ export default function Home() {
         title="Professional Pest Control Services In Mumbai" 
         subtitle="Expert pest management solutions for homes and businesses. Safe, effective, and trusted by 5000+ customers. Call us for free inspection!"
         showContactForm={true}
-        heroImage="/images/hero/pest-control.jpg"
+        heroImage="/images/hero/banner.png"
       />
 
       <section className="py-16 bg-gray-50 dark:bg-slate-800">
@@ -246,6 +246,96 @@ export default function Home() {
             <p className="text-gray-700 dark:text-gray-300 text-lg mb-3">📍 D.N. Dube Road, Ratan Nagar, Dahisar (E), Mumbai - 400068</p>
             <p className="text-gray-700 dark:text-gray-300 text-lg mb-3">📞 <a href="tel:+919453394533" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">+91-94533 94533</a></p>
             <p className="text-gray-700 dark:text-gray-300 text-lg">📧 <a href="mailto:info@removepest.in" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">info@removepest.in</a></p>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Content Section */}
+      <section className="py-16 bg-white dark:bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-950 dark:text-white mb-4">Professional Pest Control Services in Mumbai</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">RemovePest is Mumbai&apos;s most trusted pest control company, serving residential and commercial clients since 2008. Our certified technicians use government-approved, eco-friendly treatments to eliminate all types of pests safely and permanently.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-blue-50 dark:bg-slate-800 rounded-lg">
+              <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-3">Residential Pest Control</h3>
+              <p className="text-gray-600 dark:text-gray-300">We provide complete home pest control services across all areas of Mumbai. From cockroaches and rodents to bedbugs and termites — our experts protect your family with safe, child-friendly treatments that deliver long-lasting results.</p>
+            </div>
+            <div className="p-6 bg-blue-50 dark:bg-slate-800 rounded-lg">
+              <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-3">Commercial Pest Control</h3>
+              <p className="text-gray-600 dark:text-gray-300">Protect your restaurant, hotel, office, or warehouse with our scheduled commercial pest management programs. We comply with FSSAI and health department standards, ensuring your business stays pest-free and audit-ready year-round.</p>
+            </div>
+            <div className="p-6 bg-blue-50 dark:bg-slate-800 rounded-lg">
+              <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-3">AMC (Annual Maintenance Contract)</h3>
+              <p className="text-gray-600 dark:text-gray-300">Our Annual Maintenance Contract offers regular scheduled treatments at discounted rates. Ideal for housing societies, offices, and commercial kitchens. Get priority service, free re-treatments, and a dedicated pest control manager.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50 dark:bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-950 dark:text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">Everything you need to know about our pest control services in Mumbai.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Left Column */}
+            <div className="space-y-4">
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How long does a pest control treatment take?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Most standard treatments take 1–3 hours depending on the size of your property and the type of pest. Termite treatments and AMC services may require additional visits for complete elimination.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Are your pest control chemicals safe for children and pets?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes. We use only government-approved, WHO-certified chemicals that are safe for humans and pets after the recommended drying time. We always advise vacating the treated area for 2–4 hours post-treatment.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you offer a warranty on pest control services?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes, we provide a service warranty ranging from 3 months to 1 year depending on the type of treatment. If pests return within the warranty period, we offer free re-treatment at no additional cost.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How much does pest control cost in Mumbai?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Our pricing starts from ₹500 for basic treatments and varies based on property size, pest type, and treatment method. Contact us for a free inspection and customized quote with no hidden charges.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do I need to vacate my home during treatment?</h3>
+                <p className="text-gray-600 dark:text-gray-300">For most treatments, we recommend staying out for 2–4 hours. For intensive treatments like termite or bed bug control, we may advise vacating for 4–8 hours. Our team will guide you with complete pre- and post-treatment instructions.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Which areas in Mumbai do you serve?</h3>
+                <p className="text-gray-600 dark:text-gray-300">We serve all areas of Mumbai including Andheri, Bandra, Dadar, Borivali, Dahisar, Malad, Kandivali, Powai, Thane, Navi Mumbai, Worli, Fort, and all Western and Central line localities. Same-day service available.</p>
+              </div>
+            </div>
+            {/* Right Column */}
+            <div className="space-y-4">
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How many treatments are needed to eliminate termites?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Termite control typically requires 2–3 treatment sessions for complete elimination. We use a combination of soil treatment, baiting systems, and wood treatment to ensure 100% termite-free results with a long-term warranty.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Can pest control be done in a rented apartment?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Absolutely. We regularly service rented flats, societies, and commercial spaces across Mumbai. You can book directly as a tenant. We also work with housing societies and building management offices for bulk and AMC bookings.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">What preparation is needed before pest control?</h3>
+                <p className="text-gray-600 dark:text-gray-300">We recommend clearing kitchen cabinets, removing food items from countertops, covering drinking water, and keeping children and pets out of the house. Our technicians will provide a complete pre-treatment checklist when you book.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you provide pest control for restaurants and hotels?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes. We specialize in commercial pest control for restaurants, hotels, hospitals, warehouses, and food processing units. Our treatments are FSSAI-compliant and we provide documentation for health inspections and audits.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Is a free inspection available before treatment?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes, we offer a free pest inspection for all new customers. Our expert will visit your property, assess the level of infestation, identify pest entry points, and recommend the most effective and affordable treatment plan.</p>
+              </div>
+              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How do I book a pest control service in Mumbai?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call us at +91-94533 94533, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments across Mumbai with flexible scheduling to suit your convenience.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

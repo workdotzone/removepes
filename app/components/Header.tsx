@@ -12,15 +12,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="RemovePest Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
+              width={120}
+              height={48}
+              className="h-12 w-auto"
             />
-            <span className="text-xl font-bold text-white hidden sm:inline">RemovePest</span>
           </Link>
 
           {/* Desktop Navigation */}
