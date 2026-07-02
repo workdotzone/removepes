@@ -1,6 +1,7 @@
 import HeroSection from './components/HeroSection';
 import ServiceCard from './components/ServiceCard';
 import ReviewsSection from './components/ReviewsSection';
+import FaqSection from './components/FaqSection';
 
 export default function Home() {
   const services = [
@@ -220,71 +221,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50 dark:bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-blue-950 dark:text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">Everything you need to know about our pest control services in Mumbai.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Left Column */}
-            <div className="space-y-4">
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How long does a pest control treatment take?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Most standard treatments take 1–3 hours depending on the size of your property and the type of pest. Termite treatments and AMC services may require additional visits for complete elimination.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Are your pest control chemicals safe for children and pets?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Yes. We use only government-approved, WHO-certified chemicals that are safe for humans and pets after the recommended drying time. We always advise vacating the treated area for 2–4 hours post-treatment.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you offer a warranty on pest control services?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Yes, we provide a service warranty ranging from 3 months to 1 year depending on the type of treatment. If pests return within the warranty period, we offer free re-treatment at no additional cost.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How much does pest control cost in Mumbai?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Our pricing starts from ₹500 for basic treatments and varies based on property size, pest type, and treatment method. Contact us for a free inspection and customized quote with no hidden charges.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do I need to vacate my home during treatment?</h3>
-                <p className="text-gray-600 dark:text-gray-300">For most treatments, we recommend staying out for 2–4 hours. For intensive treatments like termite or bed bug control, we may advise vacating for 4–8 hours. Our team will guide you with complete pre- and post-treatment instructions.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Which areas in Mumbai do you serve?</h3>
-                <p className="text-gray-600 dark:text-gray-300">We serve all areas of Mumbai including Andheri, Bandra, Dadar, Borivali, Dahisar, Malad, Kandivali, Powai, Thane, Navi Mumbai, Worli, Fort, and all Western and Central line localities. Same-day service available.</p>
-              </div>
-            </div>
-            {/* Right Column */}
-            <div className="space-y-4">
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How many treatments are needed to eliminate termites?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Termite control typically requires 2–3 treatment sessions for complete elimination. We use a combination of soil treatment, baiting systems, and wood treatment to ensure 100% termite-free results with a long-term warranty.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Can pest control be done in a rented apartment?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Absolutely. We regularly service rented flats, societies, and commercial spaces across Mumbai. You can book directly as a tenant. We also work with housing societies and building management offices for bulk and AMC bookings.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">What preparation is needed before pest control?</h3>
-                <p className="text-gray-600 dark:text-gray-300">We recommend clearing kitchen cabinets, removing food items from countertops, covering drinking water, and keeping children and pets out of the house. Our technicians will provide a complete pre-treatment checklist when you book.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Do you provide pest control for restaurants and hotels?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Yes. We specialize in commercial pest control for restaurants, hotels, hospitals, warehouses, and food processing units. Our treatments are FSSAI-compliant and we provide documentation for health inspections and audits.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">Is a free inspection available before treatment?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Yes, we offer a free pest inspection for all new customers. Our expert will visit your property, assess the level of infestation, identify pest entry points, and recommend the most effective and affordable treatment plan.</p>
-              </div>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold text-blue-950 dark:text-white mb-2">How do I book a pest control service in Mumbai?</h3>
-                <p className="text-gray-600 dark:text-gray-300">Booking is easy! Call us at +91-94203 00006, fill out our online contact form, or send a WhatsApp message. We offer same-day and next-day appointments across Mumbai with flexible scheduling to suit your convenience.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        title="Frequently Asked Questions — Pest Control in Mumbai"
+        subtitle="Everything you need to know about our pest control services in Mumbai."
+        faqs={[
+          { q: 'How long does a pest control treatment take?', a: 'Most standard treatments take 1–3 hours depending on the size of your property and the type of pest. Termite treatments and AMC services may require additional visits for complete elimination.' },
+          { q: 'Are your pest control chemicals safe for children and pets?', a: 'Yes. We use only government-approved, WHO-certified chemicals that are safe for humans and pets after the recommended drying time of 2–4 hours post-treatment.' },
+          { q: 'Do you offer a warranty on pest control services?', a: 'Yes, we provide a service warranty ranging from 3 months to 1 year. If pests return within the warranty period, we offer free re-treatment at no additional cost.' },
+          { q: 'How much does pest control cost in Mumbai?', a: 'Our pricing starts from ₹500 for basic treatments and varies based on property size, pest type, and treatment method. Contact us for a free inspection and quote with no hidden charges.' },
+          { q: 'Do I need to vacate my home during treatment?', a: 'For most treatments, we recommend staying out for 2–4 hours. For intensive treatments like termite or bed bug control, 4–8 hours may be needed. Our team guides you with full pre- and post-treatment instructions.' },
+          { q: 'Which areas in Mumbai do you serve?', a: 'We serve all areas of Mumbai including Andheri, Bandra, Dadar, Borivali, Dahisar, Malad, Kandivali, Powai, Thane, Navi Mumbai, Worli, Fort, and all Western and Central line localities. Same-day service available.' },
+          { q: 'How many treatments are needed to eliminate termites?', a: 'Termite control typically requires 2–3 sessions for complete elimination using soil treatment, baiting systems, and wood treatment. We provide a 1-year service warranty.' },
+          { q: 'Can pest control be done in a rented apartment?', a: 'Absolutely. We regularly service rented flats, societies, and commercial spaces across Mumbai. We also work with housing societies and building management offices for AMC bookings.' },
+          { q: 'What preparation is needed before pest control?', a: 'Clear kitchen cabinets, remove food from countertops, cover drinking water, and keep children and pets away. Our technicians will provide a complete pre-treatment checklist when you book.' },
+          { q: 'Do you provide pest control for restaurants and hotels?', a: 'Yes. We specialize in commercial pest control for restaurants, hotels, hospitals, and warehouses. Our treatments are FSSAI-compliant and we provide documentation for health inspections.' },
+          { q: 'Is a free inspection available before treatment?', a: 'Yes, we offer a free pest inspection for all new customers. Our expert will assess the infestation level, identify entry points, and recommend the most effective treatment plan.' },
+          { q: 'How do I book a pest control service in Mumbai?', a: 'Booking is easy! Call us at +91-94203 00006, fill out our contact form, or send a WhatsApp message. We offer same-day and next-day appointments across Mumbai.' },
+        ]}
+      />
 
       <section className="py-16 bg-gradient-to-r from-blue-950 to-blue-900 dark:from-slate-900 dark:to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
