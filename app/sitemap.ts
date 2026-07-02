@@ -1,5 +1,8 @@
 import type { MetadataRoute } from 'next';
 
+const BASE_URL = 'https://removepest.in';
+const LAST_MODIFIED = new Date('2026-07-02');
+
 const locationSlugs = [
   'airoli', 'akola', 'ambernath', 'ambivali', 'andheri-midc', 'andheri-seepz',
   'andheri', 'asalpha', 'asangaon', 'bandra', 'bhandup', 'bhayandar', 'bhayander',
@@ -23,29 +26,53 @@ const serviceSlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://removepest.in';
-
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/gallery`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    {
+      url: `${BASE_URL}/`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${BASE_URL}/services`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/gallery`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 
-  const locationPages: MetadataRoute.Sitemap = locationSlugs.map((slug) => ({
-    url: `${baseUrl}/locations/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  }));
-
   const servicePages: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
-    lastModified: new Date(),
+    url: `${BASE_URL}/services/${slug}`,
+    lastModified: LAST_MODIFIED,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }));
 
+  const locationPages: MetadataRoute.Sitemap = locationSlugs.map((slug) => ({
+    url: `${BASE_URL}/locations/${slug}`,
+    lastModified: LAST_MODIFIED,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   return [...staticPages, ...servicePages, ...locationPages];
+}
 }
