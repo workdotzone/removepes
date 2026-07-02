@@ -236,9 +236,34 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-blue-950 dark:text-white mb-4">Serving All Areas of Mumbai</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">Professional pest control services across Mumbai and suburbs.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-            {['Andheri', 'Bandra', 'Dadar', 'Fort', 'Powai', 'Worli', 'Malad', 'Navi Mumbai', 'Thane', 'Borivali', 'Kandivali', 'Dahisar'].map((area, idx) => (
-              <div key={idx} className="bg-white dark:bg-slate-700 p-4 rounded-lg text-center text-gray-700 dark:text-gray-300 font-semibold hover:bg-blue-100 dark:hover:bg-slate-600 transition">📍 {area}</div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+            {[
+              { name: 'Andheri', slug: 'andheri' },
+              { name: 'Bandra', slug: 'bandra' },
+              { name: 'Borivali', slug: 'borivali' },
+              { name: 'Dahisar', slug: 'dahisar' },
+              { name: 'Dadar', slug: 'dadar' },
+              { name: 'Malad', slug: 'malad' },
+              { name: 'Kandivali', slug: 'kandivali' },
+              { name: 'Goregaon', slug: 'goregaon' },
+              { name: 'Jogeshwari', slug: 'jogeshwari' },
+              { name: 'Vile Parle', slug: 'vile-parle' },
+              { name: 'Santa Cruz', slug: 'santa-cruz' },
+              { name: 'Kurla', slug: 'kurla' },
+              { name: 'Powai', slug: 'powai' },
+              { name: 'Ghatkopar', slug: 'ghatkopar' },
+              { name: 'Mulund', slug: 'mulund' },
+              { name: 'Thane', slug: 'thane' },
+              { name: 'Navi Mumbai', slug: 'navi-mumbai' },
+              { name: 'Worli', slug: 'worli' },
+              { name: 'Fort', slug: 'fort' },
+              { name: 'Colaba', slug: 'colaba' },
+              { name: 'Chembur', slug: 'chembur' },
+              { name: 'Wadala', slug: 'wadala' },
+              { name: 'Sion', slug: 'sion' },
+              { name: 'Mira Road', slug: 'mira-road' },
+            ].map((area, idx) => (
+              <a key={idx} href={`/locations/${area.slug}`} className="bg-white dark:bg-slate-700 p-4 rounded-lg text-center text-gray-700 dark:text-gray-300 font-semibold hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition block">📍 {area.name}</a>
             ))}
           </div>
           <div className="bg-white dark:bg-slate-700 p-8 rounded-lg shadow-lg">
