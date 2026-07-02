@@ -44,6 +44,10 @@ export default function HeroSection({
                     priority
                     fetchPriority="high"
                   />
+                </div>
+              )}
+            </div>
+            <div className="sticky top-24">
               <HeroContactForm />
             </div>
           </div>
