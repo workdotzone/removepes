@@ -17,13 +17,14 @@ export default function ServiceCard({
     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-2 overflow-hidden flex flex-col">
       {/* Image */}
       {image && (
-        <div className="relative w-full h-48 bg-gray-200 dark:bg-slate-700">
+        <div className="w-full h-48 bg-gray-200 dark:bg-slate-700 overflow-hidden">
           <Image
             src={image}
             alt={title}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="object-cover"
+            width={370}
+            height={255}
+            className="w-full h-full object-cover"
+            unoptimized
           />
         </div>
       )}
