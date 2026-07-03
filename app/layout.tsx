@@ -43,6 +43,76 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://removepest.in/#business',
+  name: 'RemovePest',
+  description:
+    'Professional pest control services in Mumbai. Cockroach, termite, rodent, bedbug, mosquito control and more. 15+ years experience, eco-friendly solutions.',
+  url: 'https://removepest.in',
+  telephone: '+91-94203-00006',
+  email: 'info@removepest.in',
+  image: 'https://removepest.in/images/hero/banner.png',
+  logo: 'https://removepest.in/images/hero/banner.png',
+  priceRange: '₹₹',
+  currenciesAccepted: 'INR',
+  paymentAccepted: 'Cash, Credit Card, UPI, Online Transfer',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Mumbai',
+    addressLocality: 'Mumbai',
+    addressRegion: 'Maharashtra',
+    postalCode: '400001',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 19.076,
+    longitude: 72.8777,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Mumbai' },
+    { '@type': 'City', name: 'Navi Mumbai' },
+    { '@type': 'City', name: 'Thane' },
+  ],
+  serviceType: [
+    'Cockroach Control',
+    'Termite Control',
+    'Rodent Control',
+    'Bed Bug Control',
+    'Mosquito Control',
+    'Fly Control',
+    'Ants Control',
+    'Spider Control',
+    'Wood Borer Control',
+    'Honey Bee Control',
+    'Bird Nesting Control',
+    'Sanitization',
+    'General Pest Control',
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday',
+      ],
+      opens: '00:00',
+      closes: '23:59',
+    },
+  ],
+  hasMap: 'https://maps.google.com/?q=Mumbai,Maharashtra,India',
+  sameAs: [
+    'https://removepest.in',
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '5000',
+    bestRating: '5',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,6 +123,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-slate-900">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-yellow-400 text-blue-950 font-bold px-4 py-2 rounded z-[9999]">Skip to main content</a>
         <Header />
