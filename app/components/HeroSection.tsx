@@ -73,20 +73,9 @@ export default function HeroSection({
                     className="object-cover"
                     priority
                     fetchPriority="high"
-                  / aria-hidden="true">
-              {heroImage ? (
-                <div className="relative w-80 h-80 rounded-lg overflow-hidden shadow-2xl">
-                  <Image
-                    src={heroImage}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    priority
-                    aria-hidden
+                    aria-hidden="true"
                   />
                 </div>
-              ) : (
-                <div className="text-6xl">🛡️</div>
               )}
             </div>
           </div>
