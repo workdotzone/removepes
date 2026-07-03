@@ -5,16 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/_next/'],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/'],
+        disallow: '/',
       },
     ],
-    sitemap: 'https://removepest.in/sitemap.xml',
-    host: 'https://removepest.in',
   };
 }
